@@ -33,12 +33,12 @@ public class Main {
                     int age = scanner.nextInt();
                     System.out.print("Nhập lương: ");
                     double score = scanner.nextDouble();
-                    manager.addStudent(new Nhanvien(id, name, age, score));
+                    manager.addNhanvien(new Nhanvien(id, name, age, score));
                     break;
                 case 2:
                     System.out.print("Nhập mã nhân viên cần xóa: ");
                     String removeId = scanner.nextLine();
-                    manager.removeStudent(removeId);
+                    manager.removeNhanvien(removeId);
                     break;
                 case 3:
                     System.out.print("Nhập mã nhân viên cần cập nhật: ");
@@ -49,14 +49,14 @@ public class Main {
                     int newAge = scanner.nextInt();
                     System.out.print("Nhập lương mới: ");
                     double newScore = scanner.nextDouble();
-                    manager.updateStudent(updateId, newName, newAge, newScore);
+                    manager.updateNhanvien(updateId, newName, newAge, newScore);
                     break;
                 case 4:
                     System.out.print("Nhập mã nhân viên cần tìm: ");
                     String searchId = scanner.nextLine();
-                    Nhanvien foundStudent = manager.findStudent(searchId);
-                    if (foundStudent != null) {
-                        System.out.println("Thông tin nhân viên: " + foundStudent);
+                    Nhanvien foundNhanvien = manager.findNhanvien(searchId);
+                    if (foundNhanvien != null) {
+                        System.out.println("Thông tin nhân viên: " + foundNhanvien);
                     } else {
                         System.out.println("Không tìm thấy nhân viên.");
                     }

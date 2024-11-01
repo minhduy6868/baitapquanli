@@ -16,11 +16,11 @@ public class NhanvienQl {
         }
     }
 
-    public void addStudent(Nhanvien nhanvien) {
+    public void addNhanvien(Nhanvien nhanvien) {
         nhanviens.add(nhanvien);
     }
 
-    public void removeStudent(String studentId) {
+    public void removeNhanvien(String studentId) {
         boolean found = false; // Biến để kiểm tra nếu sinh viên đã tìm thấy
         for (int i = 0; i < nhanviens.size(); i++) {
             Nhanvien s = nhanviens.get(i);
@@ -37,7 +37,7 @@ public class NhanvienQl {
         //nhanviens.removeIf(s -> s.getId().equals(studentId));  // lọc danh sách = vòng for nâng cao
     }
 
-    public void updateStudent(String studentId, String name, int age, double score) {
+    public void updateNhanvien(String studentId, String name, int age, double score) {
         for (Nhanvien s : nhanviens) {
             if (s.getId().equals(studentId)) {
                 s.setTen(name);
@@ -47,7 +47,7 @@ public class NhanvienQl {
         }
     }
 
-    public Nhanvien findStudent(String studentId) {
+    public Nhanvien findNhanvien(String studentId) {
         for (Nhanvien s : nhanviens) {  //forEach
             if (s.getId().equals(studentId)) {
                 return s;
@@ -65,11 +65,11 @@ public class NhanvienQl {
 
 
 //
-//public class StudentManager {
+//public class NhanvienManager {
 //    private Nhanvien[] nhanviens; // Khai báo mảng sinh viên
 //    private int count; // Biến theo dõi số lượng sinh viên
 //
-//    public StudentManager(int capacity) {
+//    public NhanvienManager(int capacity) {
 //        nhanviens = new Nhanvien[capacity]; // Khởi tạo mảng với kích thước nhất định
 //        count = 0; // Khởi tạo số lượng sinh viên
 //    }
@@ -84,7 +84,7 @@ public class NhanvienQl {
 //        }
 //    }
 //
-//    public void addStudent(Nhanvien nhanvien) {
+//    public void addNhanvien(Nhanvien nhanvien) {
 //        if (count < nhanviens.length) {
 //            nhanviens[count] = nhanvien; // Thêm sinh viên vào mảng
 //            count++;
@@ -93,7 +93,7 @@ public class NhanvienQl {
 //        }
 //    }
 //
-//    public void removeStudent(String studentId) {
+//    public void removeNhanvien(String studentId) {
 //        for (int i = 0; i < count; i++) {
 //            if (nhanviens[i].getId().equals(studentId)) {
 //                // Đẩy các sinh viên phía sau lên
@@ -108,7 +108,7 @@ public class NhanvienQl {
 //        System.out.println("Không tìm thấy sinh viên với mã: " + studentId);
 //    }
 //
-//    public void updateStudent(String studentId, String name, int age, double score) {
+//    public void updateNhanvien(String studentId, String name, int age, double score) {
 //        for (int i = 0; i < count; i++) {
 //            if (nhanviens[i].getId().equals(studentId)) {
 //                nhanviens[i].setName(name);
@@ -120,7 +120,7 @@ public class NhanvienQl {
 //        System.out.println("Không tìm thấy sinh viên với mã: " + studentId);
 //    }
 //
-//    public Nhanvien findStudent(String studentId) {
+//    public Nhanvien findNhanvien(String studentId) {
 //        for (int i = 0; i < count; i++) {
 //            if (nhanviens[i].getId().equals(studentId)) {
 //                return nhanviens[i];
@@ -129,7 +129,7 @@ public class NhanvienQl {
 //        return null; // Nếu không tìm thấy
 //    }
 //
-//    public void displayStudents() {
+//    public void displayNhanviens() {
 //        if (count == 0) {
 //            System.out.println("Không có sinh viên nào trong danh sách.");
 //        } else {

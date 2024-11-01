@@ -46,7 +46,7 @@ public class Nhanvien {
     @Override
     public String toString() {
         return "------------------------------------------\n" +
-                "Mã SV: " + id + ", Tên: " + ten + ", Tuổi: " + tuoi + ", Điểm: " + luong;
+                "Mã Nv: " + id + ", Tên: " + ten + ", Tuổi: " + tuoi + ", Lương: " + luong;
     }
 }
 
